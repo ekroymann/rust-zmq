@@ -72,7 +72,7 @@ pub enum Constants {
 
 impl Constants {
     pub fn to_raw(&self) -> i32 {
-        *self as i32
+        self.clone() as i32
     }
 
     pub fn from_raw(raw: i32) -> Constants {
@@ -150,7 +150,7 @@ pub enum Error {
 
 impl Error {
     pub fn to_raw(&self) -> i32 {
-        *self as i32
+        self.clone() as i32
     }
 
     pub fn from_raw(raw: i32) -> Error {
